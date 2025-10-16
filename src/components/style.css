@@ -1,0 +1,251 @@
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+}
+body p {
+  font-size: 1.5rem;
+}
+body h1 {
+  font-size: 6rem;
+}
+body h2 {
+  font-size: 4rem;
+}
+body h3 {
+  font-size: 3rem;
+}
+.Parent-center {
+  display: flex;
+  justify-content: center;
+}
+/*///////////////////Page Border////////////////////////////*/
+.border {
+  width: 92.5rem;
+  background-color: #222;
+  border-radius: 6.25rem 6.25rem 0 0;
+  border-bottom: 1px #00bcd4 solid;
+}
+.betweenLines {
+  border-left: 1px #00bcd4 solid;
+}
+
+/*///////////////////PAGE HEADER//////////////////*/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #222;
+  color: #fff;
+}
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+.logo-a {
+  color: #00bcd4;
+  margin-right: 2px;
+}
+.logo-rest {
+  font-size: 32px;
+  font-weight: normal;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-links a {
+  text-decoration: none;
+}
+/*//////////////////////CONTACT LINKS//////////////////*/
+#grid-container {
+  display: grid;
+  grid-template-rows: 23px 23px;
+  gap: 3px;
+  align-items: center;
+}
+.contact img {
+  width: 23px;
+  height: 23px;
+}
+.Hamburger {
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+/*//////////////////Home Page/////////////////////*/
+.HomePage {
+  display: grid;
+  grid-template-columns: 500px minmax(600px, 980px);
+  grid-template-rows: 200px 600px;
+  margin-left: 30px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ProfilePicture {
+  background-color: #222;
+  border-radius: 50%;
+  width: 100%;
+}
+.Name {
+  grid-column: span 2;
+  text-align: center;
+}
+.Name span {
+  font-size: 10rem;
+}
+.Name-A {
+  color: #00bcd4;
+}
+.HomePageText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.HomePageText p {
+  max-width: 800px;
+}
+.ThreeWordIntro h2 {
+  line-height: 7rem;
+}
+/*////////////////////////ABOUT ME/////////////////////////////////////////*/
+.AboutMe-container {
+  margin: 2rem 1.8rem 0 1.8rem;
+}
+.AboutMe-content {
+  padding: 12.5rem;
+  color: #fff;
+  text-align: center;
+}
+.AboutMe-content .Name-A {
+  font-size: 4rem;
+}
+.AboutMe-content p {
+  font-size: 1.2rem;
+}
+
+/*/ ///////////////// SKILLS PAGE//////////////   */
+.Skills-container {
+  width: 92.5rem;
+  margin: 0 1.8rem 0 1.8rem;
+  display: flex;
+  justify-content: center;
+}
+.Skills-Card {
+  width: 100%;
+  height: 20rem;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 0rem;
+}
+.Skills-Card h3 {
+  font-size: 1.8rem;
+}
+/*/ ///////////////// Responsive tweak for smaller screens////////////// */
+@media (max-width: 1286px) {
+  body p {
+    font-size: 20px;
+  }
+  .ThreeWordIntro h2 {
+    font-size: 3.5rem;
+    line-height: 6rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1117px) {
+  html {
+    font-size: 12px;
+  }
+  .HomePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 0;
+    gap: 0px;
+  }
+
+  .HomePage img {
+    width: 25rem;
+  }
+  .HomePageText {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .HomePage p {
+    max-width: 600px;
+  }
+  .ThreeWordIntro h2 {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 716px) {
+  html {
+    font-size: 8px;
+  }
+  .HomePage p {
+    max-width: 400px;
+  }
+
+  .AboutMe {
+    padding: 9rem;
+  }
+  .Hamburger {
+    display: block;
+  }
+  .nav-links {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    background: #222;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 0 1rem;
+  }
+  .nav-links.show {
+    max-height: 500px; /* large enough to fit all links */
+    opacity: 1;
+    padding: 16px;
+  }
+  .nav-links a {
+    padding: 8px 0;
+  }
+
+  #grid-container {
+    display: grid;
+    grid-template-columns: 23px 23px;
+    gap: 10px;
+    align-items: center;
+  }
+}
