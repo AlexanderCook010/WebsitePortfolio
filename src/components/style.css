@@ -8,9 +8,10 @@
 body {
   font-family: "Montserrat", sans-serif;
   color: #222;
+  padding-bottom: 4rem;
 }
 body p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 body h1 {
   font-size: 6rem;
@@ -19,7 +20,7 @@ body h2 {
   font-size: 4rem;
 }
 body h3 {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 .Parent-center {
   display: flex;
@@ -36,7 +37,7 @@ body h3 {
   border-left: 1px #00bcd4 solid;
 }
 
-/*///////////////////PAGE HEADER//////////////////*/
+/*/ //////////////////PAGE HEADER//////////////////*/
 .site-header {
   position: sticky;
   top: 0;
@@ -90,23 +91,28 @@ body h3 {
   cursor: pointer;
 }
 
-/*//////////////////Home Page/////////////////////*/
-.HomePage {
-  display: grid;
-  grid-template-columns: 500px minmax(600px, 980px);
-  grid-template-rows: 200px 600px;
-  margin-left: 30px;
+/*/ /////////////////Home Page/////////////////////*/
+.Home-Page {
   justify-content: center;
-  gap: 30px;
+  margin-left: 30px;
+  margin-bottom: 7rem;
+}
+.Hero-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
 }
 
-.ProfilePicture {
+.Profile-Picture {
   background-color: #222;
   border-radius: 50%;
-  width: 100%;
+  flex: 0 1 30rem;
+  min-width: 25rem;
+  max-width: 100%;
 }
+
 .Name {
-  grid-column: span 2;
   text-align: center;
 }
 .Name span {
@@ -115,106 +121,189 @@ body h3 {
 .Name-A {
   color: #00bcd4;
 }
-.HomePageText {
+.Home-Page-Text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 30px;
 }
-.HomePageText p {
-  max-width: 800px;
+.Home-Page-Text p {
+  font-size: 1.5rem;
+  max-width: 50rem;
 }
-.ThreeWordIntro h2 {
+.Three-Word-Intro h2 {
   line-height: 7rem;
 }
 /*////////////////////////ABOUT ME/////////////////////////////////////////*/
 .AboutMe-container {
-  margin: 2rem 1.8rem 0 1.8rem;
+  margin: 0rem 1.8rem 0 1.8rem;
 }
 .AboutMe-content {
-  padding: 12.5rem;
+  padding: 5rem;
   color: #fff;
   text-align: center;
+}
+.AboutMe-content h2 {
+  font-size: 3rem;
 }
 .AboutMe-content .Name-A {
   font-size: 4rem;
 }
 .AboutMe-content p {
-  font-size: 1.2rem;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 40rem;
 }
-
-/*/ ///////////////// SKILLS PAGE//////////////   */
+/*/ ///////////////// SKILLS PAGE/////////////////*/
 .Skills-container {
   width: 92.5rem;
   margin: 0 1.8rem 0 1.8rem;
   display: flex;
   justify-content: center;
+  background-color: #222;
+  border-radius: 0 0 6.25rem 6.25rem;
 }
 .Skills-Card {
   width: 100%;
-  height: 20rem;
-  padding: 1rem;
-  background-color: #222;
+  padding: 1rem 1rem 1.5rem 1rem;
   color: #fff;
   text-align: center;
   border-radius: 0rem;
 }
-.Skills-Card h3 {
-  font-size: 1.8rem;
-}
-/*/ ///////////////// Responsive tweak for smaller screens////////////// */
-@media (max-width: 1286px) {
-  body p {
-    font-size: 20px;
-  }
-  .ThreeWordIntro h2 {
-    font-size: 3.5rem;
-    line-height: 6rem;
-    margin-left: 0;
-  }
+
+.Skills-Card p {
+  font-size: 1rem;
+  margin: 1.5rem auto;
+  width: fit-content;
+  max-width: 20rem;
 }
 
-@media (max-width: 1117px) {
+.List-container {
+  margin-top: 1.5rem;
+  margin: 0 auto;
+  width: fit-content;
+}
+.List-container li {
+  margin-top: 0.8rem;
+
+  list-style-type: none;
+  text-align: left;
+}
+/*/ ///////////////// Work Experince PAGE/////////////////*/
+.Work-Experince-container {
+  margin-top: 7rem;
+}
+.Work-Experience {
+  max-width: 80rem;
+}
+.Work-Card {
+  margin-top: 1rem;
+  border-bottom: 1px #00bcd4 solid;
+}
+.Work-Card li {
+  margin: 1rem 0 0 1.1rem;
+}
+
+/*/ //////////////////EMAIL////////////////////////*/
+#contactTrigger {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #0077cc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*/ ///////////////// MEDIA QUERY/////////////////*/
+@media (max-width: 900px) {
   html {
-    font-size: 12px;
-  }
-  .HomePage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-left: 0;
-    gap: 0px;
-  }
-
-  .HomePage img {
-    width: 25rem;
-  }
-  .HomePageText {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .HomePage p {
-    max-width: 600px;
-  }
-  .ThreeWordIntro h2 {
-    margin-top: 10px;
-    margin-left: 0;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 716px) {
-  html {
-    font-size: 8px;
+  .Profile-Picture {
+    width: 25rem;
   }
-  .HomePage p {
+  .Hero-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Home-Page {
+    margin-top: 10px;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    gap: 0px;
+  }
+  .Home-Page-Text {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .Home-Page p {
     max-width: 400px;
   }
 
   .AboutMe {
     padding: 9rem;
   }
+  .Skills-container {
+    flex-direction: column;
+  }
+  .betweenLines {
+    border-left: 0;
+    border-bottom: 1px #00bcd4 solid;
+  }
+  /*
   .Hamburger {
     display: block;
   }
@@ -234,7 +323,7 @@ body h3 {
     padding: 0 1rem;
   }
   .nav-links.show {
-    max-height: 500px; /* large enough to fit all links */
+    max-height: 500px;
     opacity: 1;
     padding: 16px;
   }
@@ -248,4 +337,5 @@ body h3 {
     gap: 10px;
     align-items: center;
   }
+  */
 }

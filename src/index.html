@@ -16,18 +16,20 @@
       <a href="#home" class="logo">
         <span class="logo-a">A</span><span class="logo-rest">lexander</span>
       </a>
+      <!---
       <nav class="nav-links" id="nav-links">
         <a href="#home" class="nav-button headerButton">Home</a>
         <a href="#about" class="nav-button headerButton">About</a>
         <a href="#projects" class="nav-button headerButton">Projects</a>
         <a href="#resume" class="nav-button headerButton">Resume</a>
+        --->
         <div id="grid-container">
-          <a href="..." class="contact linkedIn"
+          
+          <a href="https://www.linkedin.com/in/alex-cook-a2097a160/" class="contact linkedIn"
             ><img src="./assets/linkedinLogo.png" alt="Linked In"
           /></a>
-          <a href="..." class="contact email"
-            ><img src="./assets/email.png" alt="Email"
-          /></a>
+          <div class="contact" id="email-Button"><img src="./assets/email.png" alt="Email"
+          /></div>
         </div>
       </nav>
       <img
@@ -37,28 +39,51 @@
         id="Hamburger"
       />
     </header>
+   <div id="emailModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Send Me an Email</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
     <!----------------------------- HOME SECTION  ----------------------------------->
-    <div class="HomePage">
+    <div class="Home-Page">
       <h1 class="Name"><span class="Name-A">A</span>lexander Cook</h1>
-      <img
-        src="./assets/profilePicture.png"
-        alt="Profile Picture"
-        class="ProfilePicture"
-      />
-      <div class="HomePageText">
-        <div class="ThreeWordIntro">
-          <h2>Designer<br />Developer <br />Versatile</h2>
+      <div class="Hero-Container">
+        <img
+          src="./assets/profilePicture.png"
+          alt="Profile Picture"
+          class="Profile-Picture"
+        />
+        <div class="Home-Page-Text">
+          <div class="Three-Word-Intro">
+            <h2>Designer<br />Developer <br />Versatile</h2>
+          </div>
+          <p>
+            I blend technical precision with creative design. Building
+            responsive websites that feel as good as they look.
+          </p>
         </div>
-        <p>
-          I blends technical precision with creative design. Building responsive
-          websites that feel as good as they look.
-        </p>
       </div>
     </div>
     <!----------------------------- ABOUT SECTION  ----------------------------------->
     <div class="AboutMe-container Parent-center">
       <div class="border AboutMe-content">
-        <h3>Hello, I am <span class="Name-A">A</span>lexander Cook</h3>
+        <h2 class="AboutMe-Header">
+          Hello, I am <span class="Name-A">A</span>lexander Cook
+        </h2>
         <p>
           Over the years, I’ve built strong expertise not only in programming
           but also in design, allowing me to create solutions that are both
@@ -71,14 +96,130 @@
     <!----------------------------- SKILLS SECTION  ----------------------------------->
     <div class="Parent-center">
       <div class="Skills-container">
-        <div class="Skills-Card"><h3>Designer</h3></div>
+        <div class="Skills-Card">
+          <h3>Designer</h3>
+          <p>
+            What I use to either prototype what to build or create assests to be
+            used.
+          </p>
+          <div class="List-container">
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Blender</li>
+            <li>Pen and Paper</li>
+          </div>
+        </div>
         <div class="betweenLines"></div>
-        <div class="Skills-Card"><h3>Developer</h3></div>
+        <div class="Skills-Card">
+          <h3>Developer</h3>
+          <p>
+            Tools & languages I'm proficent in using to create websites &
+            interactive experiences.
+          </p>
+          <div class="List-container">
+            <li>C++</li>
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>HTML5</li>
+            <li>REACT</li>
+          </div>
+        </div>
         <div class="betweenLines"></div>
-        <div class="Skills-Card"><h3>Versatile</h3></div>
+        <div class="Skills-Card">
+          <h3>Versatile</h3>
+          <p>
+            The applications I have used to develope projets and collaborate
+            with teams.
+          </p>
+          <div class="List-container">
+            <li>Git / Git Hub</li>
+            <li>Perforce</li>
+            <li>Visual Studios Code</li>
+            <li>Unity Engine</li>
+            <li>Unreal Engine 5</li>
+          </div>
+        </div>
       </div>
     </div>
-    <!----------------------------- PROJECT SECTION  ----------------------------------->
+    <!----------------------------- Work Experince SECTION  ----------------------------------->
+    <div class="Parent-center Work-Experince-container">
+      <div class="Work-Experience">
+        <h2>Professional Experience</h2>
+        <div class="Work-Card">
+          <h3>
+            Multimedia Developer <br />Transtecs <br />
+            March 2022 - Present
+          </h3>
+          <li>
+            Collaborated closely with United States Navy personnel and Transtecs
+            staff to design and develop complex ship maintenance simulations
+            tailored for operational training.
+          </li>
+          <li>
+            Served as lead software engineer for simulation development,
+            utilizing the Unreal 5 Engine Blueprints buliding complex simulation
+            enviorments.
+          </li>
+          <li>
+            Developed additional simulations using JavaScript, HTML5, and CSS,
+            delivering responsive, browser-based experiences tailored for
+            smaller maintenance workflows.
+          </li>
+          <li>
+            Engineered reusable frontend systems to streamline the creation of
+            new simulation tasks, significantly boosting development efficiency.
+          </li>
+          <li>
+            Optimized engine performance by developing streamlined, efficient
+            code structures that enhanced simulation responsiveness and reduced
+            runtime overhead.
+          </li>
+        </div>
+        <div class="Work-Card">
+          <h3>
+            Game Developer <br />Self Employed <br />
+            August 2018 - Present
+          </h3>
+          <li>
+            Created a diverse portfolio of games using Unity (C#) and Unreal
+            Engine (Blueprint & C++), demonstrating fluency across multiple
+            development environments and programming languages
+          </li>
+          <li>
+            Led game and level design efforts, managing development cycles to
+            ensure timely delivery and alignment with gameplay goals.
+          </li>
+          <li>
+            Showcased six completed projects at a major public festival in
+            Peoria, IL, engaging thousands of attendees and receiving positive
+            feedback from players and industry professionals.
+          </li>
+        </div>
+        <div class="Work-Card">
+          <h3>
+            Lead Game Developer (Intern) <br />Change Lab <br />
+            January 2020 - September 2020,
+          </h3>
+          <li>
+            Collaborated with developers to build a Unity-based game prototype,
+            contributing to core gameplay mechanics and scene management
+            scripting.
+          </li>
+          <li>
+            Designed and developed a business simulation that enhanced students’
+            understanding of real-world techniques through guided, interactive
+            conversations.
+          </li>
+          <li>
+            Transitioned to JavaScript development by rebuilding the game using
+            React, implementing responsive UI components and scalable
+            architecture.
+          </li>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 <script src="./script.js"></script>

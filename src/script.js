@@ -3,6 +3,17 @@ const navLinks = document.getElementById("nav-links");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
+
+const trigger = document.getElementById("email-Button");
+const modal = document.getElementById("emailModal");
+const closeBtn = document.querySelector(".close");
+
+trigger.onclick = () => (modal.style.display = "block");
+closeBtn.onclick = () => (modal.style.display = "none");
+window.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
+
 /*
 Creates Lines (<div></div> that will fade with each new line created)
 const container = document.querySelector(".HomePage-bckgrd");
